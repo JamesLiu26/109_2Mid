@@ -57,15 +57,10 @@ namespace _109_2Mid {
 
         protected void rbl_Res_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (rbl_Res.SelectedIndex == 0) { 
+            if (rbl_Res.SelectedIndex == 0)
                 tb_Des.Visible = false;
-                tb_Des.Height = 0;
-            }
             else
-            {
                 tb_Des.Visible = true;
-                lb_Msg.Text += tb_Des.Text;
-            }
         }
     }
 }
