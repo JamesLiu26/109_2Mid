@@ -26,25 +26,33 @@ namespace _109_2Mid {
 
         protected void dbl_Area_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             if (dbl_Area.SelectedIndex == 0)
             {
-                dbl_Place.Items[0].Enabled = true;
-                dbl_Place.Items[1].Enabled = true;
-                dbl_Place.Items[2].Enabled = true;
-                dbl_Place.Items[3].Enabled = false;
-                dbl_Place.Items[4].Enabled = false;
-                dbl_Place.Items[5].Enabled = false;
+                for (int i = 0; i < dbl_Place.Items.Count; i++)
+                {
+                    if (i <= 2)
+                        dbl_Place.Items[i].Enabled = true;
+                    else
+                        dbl_Place.Items[i].Enabled = false;
+                }
             }
             else
             {
-                dbl_Place.Items[0].Enabled = false;
-                dbl_Place.Items[1].Enabled = false;
-                dbl_Place.Items[2].Enabled = false;
-                dbl_Place.Items[3].Enabled = true;
-                dbl_Place.Items[4].Enabled = true;
-                dbl_Place.Items[5].Enabled = true;
+                for (int i = 0; i < dbl_Place.Items.Count; i++)
+                {
+                    if (i > 2)
+                        dbl_Place.Items[i].Enabled = true;
+                    else
+                        dbl_Place.Items[i].Enabled = false;
+                }
             }
+
+
+
             
+
+
         }
 
         protected void rbl_Res_SelectedIndexChanged(object sender, EventArgs e)
