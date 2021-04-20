@@ -12,7 +12,7 @@
         <div>
             <h1>訂貨單</h1>
 
-            <asp:DropDownList ID="dbl_Area" runat="server"  AutoPostBack="true">
+            <asp:DropDownList ID="dbl_Area" runat="server"  AutoPostBack="true" OnSelectedIndexChanged="dbl_Area_SelectedIndexChanged">
                 <asp:ListItem Selected="True">北區</asp:ListItem>
                 <asp:ListItem>中區</asp:ListItem>
             </asp:DropDownList><br />
@@ -30,13 +30,13 @@
             <asp:TextBox ID="tb_Name" runat="server"></asp:TextBox><br />
 
             <asp:Label ID="Label2" runat="server" Text="其他"></asp:Label>
-            <asp:RadioButtonList ID="rbl_Res" runat="server" AutoPostBack="true">
+            <asp:RadioButtonList ID="rbl_Res" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rbl_Res_SelectedIndexChanged">
                 <asp:ListItem Selected="True">否</asp:ListItem>
                 <asp:ListItem>是</asp:ListItem>
-            </asp:RadioButtonList><br />
+            </asp:RadioButtonList>
             <asp:TextBox ID="tb_Des" runat="server" Visible="false" Width="400px"></asp:TextBox><br />
 
-            <asp:Button ID="btn_Sub" runat="server" Text="送出" />
+            <asp:Button ID="btn_Sub" runat="server" Text="送出" OnClick="btn_Sub_Click"/><br />
             <asp:Label ID="lb_Msg" runat="server"></asp:Label>
         </div>
     </form>
