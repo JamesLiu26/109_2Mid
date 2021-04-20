@@ -47,12 +47,6 @@ namespace _109_2Mid {
                         dbl_Place.Items[i].Enabled = false;
                 }
             }
-
-
-
-            
-
-
         }
 
         protected void rbl_Res_SelectedIndexChanged(object sender, EventArgs e)
